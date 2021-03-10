@@ -24,7 +24,7 @@ public class frequencycontroller {
 	}
 	
 	@PostMapping("/")
-	public String Calc(@RequestParam(name = "data", defaultValue = "", required = true) String data,Model model) {
+	public String Calc(@RequestParam(name = "data", defaultValue = "", required = true) String data, Model model) {
 		String[] ArrayStr = data.split(",");
 		
 		//Functions
@@ -35,7 +35,6 @@ public class frequencycontroller {
 		
 		//Data Bind
 		model.addAttribute("data",data);
-		model.addAttribute("range", range);
 		model.addAttribute("range", range);
 		model.addAttribute("interval", intervals);
 		model.addAttribute("amplitude", amplitud);
